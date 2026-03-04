@@ -12,6 +12,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install youtube-transcript-api
+        run: pip install yt-dlp
       - name: Get transcript
         run: python get_transcript.py
