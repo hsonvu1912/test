@@ -1,0 +1,17 @@
+name: Get YouTube Transcript
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-transcript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install youtube-transcript-api
+      - name: Get transcript
+        run: python get_transcript.py
